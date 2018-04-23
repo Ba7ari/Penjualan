@@ -1,0 +1,9 @@
+Jurnal Penerimaan Kas
+---------------------
+
+SELECT a.nokwt, a.tglkwt, b.jumlah as kas,  c.jumlah as penjualan
+FROM kwitansi a, jurnal b, Jurnal c
+WHERE a.nokwt = b.nokwt 
+AND a.nokwt = c.nokwt 
+AND b.kdrek = '10001'
+AND c.kdrek = '41001'
